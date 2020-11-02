@@ -1,0 +1,56 @@
+* Lilla Meny
+Una automatizacion que genera menús para la familia.
+
+** Notas del proyecto
+Voy a utilizar una fuente de datos muy sencilla [[https://www.genaw.com/lowcarb/][Linda LowCarb]] donde las recetas vienen sin la mierda habitual de los anuncios.
+
+** Los objetivos
+
+1. Generación de una lista de la compra.
+2. Visualización del menú del día.
+3. Visualización del menú de la semana.
+4. Visualización del menú del mes ~3 semanas nos ha resultado un período bastante agradable.
+5. Definición de bloques de comida, ejemplo
+   - Pollo asado + verduras
+   - Ensalada
+   - Sobras
+
+** Tareas iniciales
+
+*** Infrastructura: Persistencia
+- Fuentes de datos de development.
+- Fuentes de datos de producción.
+Mi primer instinto es utilizar Postgresql pero honestamente no tengo muy claro porqué.
+- Porque necesito una persistencia que sobreviva a sesiones diferentes desde dispositivos diferentes.
+
+*** Captura de datos de genaw
+- genaw está organizado en forma de árbol, ejemplo: main dishes
+- Root: www.genaw.com/lowcarb/recipes.html
+- Main dishes recipes: www.genaw.com/lowcarb/main_dish_recipes.html
+- Chicken recipes: www.genaw.com/lowcarb/chicken_recipes.html
+- Las paginas importantes suelen llamarse "recipes"
+
+| Nombre de fichero      | Importancia                                       |
+|------------------------+---------------------------------------------------|
+| recipes.html           | Fichero raiz, probablemente el origen del crawleo |
+| main_dish_recipes.html |                                                   |
+| appetizer_recipes.html |                                                   |
+| beef_recipes.html      |                                                   |
+| bread_recipes.html     |                                                   |
+| burger_recipes.html    |                                                   |
+| chicken_recipes.html   |                                                   |
+| dessert_recipes.html   |                                                   |
+| favorite_recipes.html  |                                                   |
+| meatless_recipes.html  |                                                   |
+| misc_recipes.html      |                                                   |
+| pork_recipes.html      |                                                   |
+| salad_recipes.html     |                                                   |
+| seafood_recipes.html   |                                                   |
+| side_dish_recipes.html |                                                   |
+| snack_recipes.html     |                                                   |
+| soup_recipes.html      |                                                   |
+|------------------------+---------------------------------------------------|
+
+*** Ampliación del modelo para contener "bloques"
+*** Frontend.
+*** Modelo de control
