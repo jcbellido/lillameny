@@ -51,6 +51,13 @@ Mi primer instinto es utilizar Postgresql pero honestamente no tengo muy claro p
 | soup_recipes.html      |                                                   |
 |------------------------+---------------------------------------------------|
 
+- El proceso deberia ser capaz de pullear las imagenes relacionadas con una receta en particular
+<img src="food_photos/banana_walnut_muffins.jpg" ... >
+
+**** Secciones extra: Products
+**** Secciones extra: Inspiration
+
 *** Ampliación del modelo para contener "bloques"
 *** Frontend.
 *** Modelo de control
+
