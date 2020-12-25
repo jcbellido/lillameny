@@ -24,6 +24,10 @@ Mi primer instinto es utilizar Postgresql pero honestamente no tengo muy claro p
 - Porque necesito una persistencia que sobreviva a sesiones diferentes desde dispositivos diferentes.
 
 *** Captura de datos de genaw
+
+https://schollz.com/blog/ingredients/
+https://github.com/schollz/ingredients
+
 - genaw está organizado en forma de árbol, ejemplo: main dishes
 - Root: www.genaw.com/lowcarb/recipes.html
 - Main dishes recipes: www.genaw.com/lowcarb/main_dish_recipes.html
@@ -52,10 +56,32 @@ Mi primer instinto es utilizar Postgresql pero honestamente no tengo muy claro p
 |------------------------+---------------------------------------------------|
 
 - El proceso deberia ser capaz de pullear las imagenes relacionadas con una receta en particular
-<img src="food_photos/banana_walnut_muffins.jpg" ... >
+ex: <img src="food_photos/banana_walnut_muffins.jpg" ... >
 
 **** Secciones extra: Products
 **** Secciones extra: Inspiration
+
+**** Formato de transferencia para una receta especificamente
+- id: PK, unique, de
+- name : String
+- ingredients : [ String, String, ... ] / String
+- comments : String
+- nutritions: [ Nutrition, Nutrition, ...  ]
+- resources : [ img, img, ... ]
+ 
+donde "Nutrition" puede ser:
+[Serving type] 133 Calories; 11g Fat; 4g Protein; 4g Carbohydrate; 2g Dietary Fiber; 2g Net Carbs
+
+**** Extraccion de datos, pistas y handlers
+https://schollz.com/blog/ingredients/
+https://github.com/schollz/ingredients
+
+1. Identificar si el fichero en concreto es o no una receta o es cualquier otra cosa :P
+2. Las listas de intgredientes pueden estar mezcladas con pasos de las 
+
+3. Existe un bloque inferior que tiene que ver con los ingredientes y donde comprarlos --> marcador de final
+4. El nodo <title> es el nombre real de la receta, pero va siempre seguido de: " - Linda's Low Carb Menus & Recipes"
+5. Hipotesis: Los comentarios van siempre DESPUES de la imagen que marca la evaluacion de la receta 5_star ... 
 
 *** Ampliación del modelo para contener "bloques"
 *** Frontend.
