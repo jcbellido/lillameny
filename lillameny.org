@@ -1,16 +1,16 @@
 * Lilla Meny
-Una automatizacion que genera menús para la familia.
+Una automatizacion que genera menï¿½s para la familia.
 
 ** Notas del proyecto
 Voy a utilizar una fuente de datos muy sencilla [[https://www.genaw.com/lowcarb/][Linda LowCarb]] donde las recetas vienen sin la mierda habitual de los anuncios.
 
 ** Los objetivos
 
-1. Generación de una lista de la compra.
-2. Visualización del menú del día.
-3. Visualización del menú de la semana.
-4. Visualización del menú del mes ~3 semanas nos ha resultado un período bastante agradable.
-5. Definición de bloques de comida, ejemplo
+1. Generaciï¿½n de una lista de la compra.
+2. Visualizaciï¿½n del menï¿½ del dï¿½a.
+3. Visualizaciï¿½n del menï¿½ de la semana.
+4. Visualizaciï¿½n del menï¿½ del mes ~3 semanas nos ha resultado un perï¿½odo bastante agradable.
+5. Definiciï¿½n de bloques de comida, ejemplo
    - Pollo asado + verduras
    - Ensalada
    - Sobras
@@ -19,8 +19,8 @@ Voy a utilizar una fuente de datos muy sencilla [[https://www.genaw.com/lowcarb/
 
 *** Infrastructura: Persistencia
 - Fuentes de datos de development.
-- Fuentes de datos de producción.
-Mi primer instinto es utilizar Postgresql pero honestamente no tengo muy claro porqué.
+- Fuentes de datos de producciï¿½n.
+Mi primer instinto es utilizar Postgresql pero honestamente no tengo muy claro porquï¿½.
 - Porque necesito una persistencia que sobreviva a sesiones diferentes desde dispositivos diferentes.
 
 *** Captura de datos de genaw
@@ -28,7 +28,7 @@ Mi primer instinto es utilizar Postgresql pero honestamente no tengo muy claro p
 https://schollz.com/blog/ingredients/
 https://github.com/schollz/ingredients
 
-- genaw está organizado en forma de árbol, ejemplo: main dishes
+- genaw estï¿½ organizado en forma de ï¿½rbol, ejemplo: main dishes
 - Root: www.genaw.com/lowcarb/recipes.html
 - Main dishes recipes: www.genaw.com/lowcarb/main_dish_recipes.html
 - Chicken recipes: www.genaw.com/lowcarb/chicken_recipes.html
@@ -83,7 +83,7 @@ https://github.com/schollz/ingredients
 4. El nodo <title> es el nombre real de la receta, pero va siempre seguido de: " - Linda's Low Carb Menus & Recipes"
 5. Hipotesis: Los comentarios van siempre DESPUES de la imagen que marca la evaluacion de la receta 5_star ... 
 
-*** Ampliación del modelo para contener "bloques"
+*** Ampliaciï¿½n del modelo para contener "bloques"
 *** Frontend.
 *** Modelo de control
 
